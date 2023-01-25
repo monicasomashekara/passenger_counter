@@ -1,12 +1,16 @@
-// Javascript
-//document.getElementById("count-el").innerText=5
+let saveEl = document.getElementById("save-el")
+let countEl = document.getElementById("count-el")
+let count = 0
 
-let count = 6
-console.log(count)
+function increment() {
+    count += 1
+    countEl.textContent = count
+}
 
-let myAge = 30
-console.log(myAge)
+function save() {
+    let countStr = count + " - "
+    saveEl.textContent += countStr
+    count = 0
+    countEl.textContent = count
+}
 
-let humanDogRatio = 7
-let myDogAge = myAge * humanDogRatio
-console.log(myDogAge)
